@@ -1,0 +1,28 @@
+<object-stream>
+  <Classes.ShippingSystem>
+    <ports>
+      <head>
+        <contents class="Classes.Port">
+          <portName>ssdnkd</portName>
+          <portCode>233</portCode>
+          <portCountry>dffde</portCountry>
+          <dockedShips>
+            <head>
+              <contents class="Classes.ContainerShip">
+                <shipName>fref</shipName>
+                <shipCode>233</shipCode>
+                <flagState>df</flagState>
+                <photograph>dded</photograph>
+                <currentPort reference="../../../.."/>
+                <containers/>
+              </contents>
+            </head>
+          </dockedShips>
+          <storedContainers/>
+          <pallets/>
+        </contents>
+      </head>
+    </ports>
+    <shipsAtSea/>
+  </Classes.ShippingSystem>
+</object-stream>
