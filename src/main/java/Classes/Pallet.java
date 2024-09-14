@@ -49,7 +49,7 @@ public class Pallet {
     public void setUnitValue(int unitValue) {
         this.unitValue = unitValue;
     }
-
+//
     public int getTotalWeight() {
         return totalWeight;
     }

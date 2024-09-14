@@ -46,7 +46,7 @@ public class PortControlsController extends GUIController {
     @FXML
     private Button dockShipButton;
     private SceneManager sceneManager = SceneManager.getInstance();
-
+//
 
     private ShippingSystem system;
     public PortControlsController() {

@@ -13,7 +13,7 @@ public class LinkList<L> implements Iterable<L>, Serializable {
         Ln.next=head;
         head=Ln;
     }
-
+//
     public void remove(L e){
         LinkNode<L> current = head;
         if(head == null){

@@ -1,7 +1,7 @@
 package Classes;
 
 
-
+//
 public class LinkNode<N>  {
     public LinkNode<N> next = null;
     private N contents;

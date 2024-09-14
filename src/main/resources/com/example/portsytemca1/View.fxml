@@ -41,6 +41,7 @@
       </VBox>
    </left>
    <center>
+      //
       <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER">
          <children>
             <Text fill="WHITE" layoutX="204.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View">

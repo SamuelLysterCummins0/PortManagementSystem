@@ -11,8 +11,7 @@ public class Container {
     private ContainerShip currentShip;
     private Port currentPort;
     private LinkList<Pallet> pallets;
-
-
+    //
     public Container(int containerNumber, int containerSize) {
         this.containerNumber = containerNumber;
         this.containerSize = containerSize;

@@ -246,6 +246,7 @@ try {
 
 }
     }
+    //
 public void addPalletButton(){
     Container selectedShip = shipContainersListView.getSelectionModel().getSelectedItem();
 Container selectedContainer = portContainersListView.getSelectionModel().getSelectedItem();

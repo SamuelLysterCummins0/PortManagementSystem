@@ -12,8 +12,7 @@ import java.io.IOException;
 public class SceneManager {
         private static SceneManager instance;
         private Stage primaryStage;
-
-
+        //
         private SceneManager() {}
 
         public static SceneManager getInstance() {

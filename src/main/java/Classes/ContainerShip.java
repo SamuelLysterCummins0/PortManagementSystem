@@ -41,7 +41,7 @@ private LinkList<Container> containers;
     public int getShipCode() {
         return shipCode;
     }
-
+//
     public void setShipCode(int shipCode) {
         if (ShippingSystem.isUniqueShipCode(shipCode)) {
             this.shipCode = shipCode;
