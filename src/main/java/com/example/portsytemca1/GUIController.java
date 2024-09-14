@@ -314,13 +314,7 @@ return -1;
         SceneManager.getInstance().switchScene("PortControls.fxml");
     }
 
-    public void switchToView(ActionEvent event) throws IOException {
-        sceneManager.switchScene("View.fxml");
-    }
 
-    public void switchToSearch(ActionEvent event) throws IOException {
-        sceneManager.switchScene("Search.fxml");
-    }
 
     public void switchToSave(ActionEvent event) throws IOException {
         sceneManager.switchScene("Save.fxml");

@@ -16,7 +16,7 @@ public class GUIApplication extends Application {
         SceneManager.getInstance().setPrimaryStage(primaryStage);
         SceneManager.getInstance().switchScene("Port.fxml");
     }
-//
+
     public static void main(String[] args) {
         launch(args);
     }

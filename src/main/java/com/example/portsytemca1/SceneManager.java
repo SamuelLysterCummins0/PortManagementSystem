@@ -32,7 +32,6 @@ public class SceneManager {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
 
-
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();

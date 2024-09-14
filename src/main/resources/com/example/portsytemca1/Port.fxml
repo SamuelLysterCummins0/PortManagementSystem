@@ -88,5 +88,5 @@
             <Text fill="WHITE" layoutX="223.0" layoutY="258.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------------------------" />
          </children></AnchorPane>
    </right>
-   //
+
 </BorderPane>
