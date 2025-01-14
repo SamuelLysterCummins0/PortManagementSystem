@@ -8,6 +8,7 @@ This project is a port management system where users can create ports, add conta
 - Add containerships to ports.
 - Load containers onto ships and pallets into containers.
 - Manage port controls: send ships to sea, dock them in other ports, and unload containers and pallets.
+- Search up Pallets to see their location and details.
 
 ## How to Use
 1. Create a port and add containerships.
@@ -16,4 +17,4 @@ This project is a port management system where users can create ports, add conta
 4. Dock ships in the new port and unload the cargo.
 
 ## Running the Project
-To run the project, just compile and run `ShippingSystem.java`. This will start everything so you can create ports, add ships, and manage your shipments. **For the best experience, keep the application minimized** so it runs smoothly.
+To run the project, just compile and run `GUIApplication.java`. This will start everything so you can create ports, add ships, and manage your shipments. **For the best experience, keep the application minimized** so it runs smoothly.
