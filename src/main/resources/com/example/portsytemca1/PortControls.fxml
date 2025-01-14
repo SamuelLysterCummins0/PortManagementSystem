@@ -12,27 +12,22 @@
    <left>
       <VBox prefHeight="400.0" prefWidth="135.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToPort" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToPort" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToPortControls" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToSearch" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Search" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="126.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#switchToSave" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToSave" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
@@ -45,19 +40,18 @@
          <children>
             <Text fill="WHITE" layoutX="259.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port Controls" textAlignment="CENTER">
                <font>
-                  <Font size="22.0" />
+                  <Font size="24.0" />
                </font>
-
             </Text>
-            <ListView fx:id="portListView" layoutX="8.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="113.0" />
-            <ListView fx:id="shipContainersListView" layoutX="366.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="114.0" />
-            <Button fx:id="myLoadContainerButton" layoutX="347.0" layoutY="188.0" mnemonicParsing="false" onAction="#loadContainerButton" text=" Load Container" />
-            <Button fx:id="myUnloadContainerButton" layoutX="460.0" layoutY="188.0" mnemonicParsing="false" onAction="#unloadContainerButton" text="unload Container" />
-            <ListView fx:id="portContainersListView" layoutX="492.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="114.0" />
-            <ListView fx:id="dockedShipsListView" layoutX="127.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="113.0" />
-            <ListView fx:id="atSeaShipsListView" layoutX="245.0" layoutY="59.0" prefHeight="95.0" prefWidth="113.0" />
-            <Button fx:id="mydockShipButton" layoutX="100.0" layoutY="188.0" mnemonicParsing="false" onAction="#dockShipButton" text="Dock" />
-            <Button fx:id="myLaunchShipButton" layoutX="157.0" layoutY="188.0" mnemonicParsing="false" onAction="#launchShipButton" text="Launch" />
+            <ListView fx:id="portListView" layoutX="8.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="113.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <ListView fx:id="shipContainersListView" layoutX="366.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <Button fx:id="myLoadContainerButton" layoutX="347.0" layoutY="188.0" mnemonicParsing="false" onAction="#loadContainerButton" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Load Container" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <Button fx:id="myUnloadContainerButton" layoutX="460.0" layoutY="188.0" mnemonicParsing="false" onAction="#unloadContainerButton" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Unload Container" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <ListView fx:id="portContainersListView" layoutX="492.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <ListView fx:id="dockedShipsListView" layoutX="127.0" layoutY="59.0" onMouseClicked="#initialize" prefHeight="95.0" prefWidth="113.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <ListView fx:id="atSeaShipsListView" layoutX="245.0" layoutY="59.0" prefHeight="95.0" prefWidth="113.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <Button fx:id="mydockShipButton" layoutX="100.0" layoutY="188.0" mnemonicParsing="false" onAction="#dockShipButton" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Dock" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <Button fx:id="myLaunchShipButton" layoutX="157.0" layoutY="188.0" mnemonicParsing="false" onAction="#launchShipButton" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Launch" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
             <Text fill="WHITE" layoutX="53.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port" wrappingWidth="23.990234375">
                <font>
                   <Font size="13.0" />
@@ -68,21 +62,22 @@
                   <Font size="13.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="377.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ship containers" wrappingWidth="91.990234375">
+            <Text fill="WHITE" layoutX="377.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ship Containers" wrappingWidth="91.990234375">
                <font>
                   <Font size="13.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="514.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="port containers" wrappingWidth="91.990234375">
+            <Text fill="WHITE" layoutX="514.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port Containers" wrappingWidth="91.990234375">
                <font>
                   <Font size="13.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="255.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ships at sea" wrappingWidth="91.990234375">
+            <Text fill="WHITE" layoutX="255.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ships at Sea" wrappingWidth="91.990234375">
                <font>
                   <Font size="13.0" />
                </font>
             </Text>
-         </children></AnchorPane>
+         </children>
+      </AnchorPane>
    </center>
 </BorderPane>

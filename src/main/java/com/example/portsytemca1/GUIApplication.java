@@ -14,6 +14,7 @@ public class GUIApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         SceneManager.getInstance().setPrimaryStage(primaryStage);
+        primaryStage.setResizable(false);
         SceneManager.getInstance().switchScene("Port.fxml");
     }
 

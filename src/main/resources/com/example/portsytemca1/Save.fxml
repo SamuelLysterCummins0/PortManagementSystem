@@ -11,28 +11,22 @@
    <left>
       <VBox prefHeight="400.0" prefWidth="135.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToPort" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToPort" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToPortControls" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToPortControls" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-
-            <Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToSearch" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Search" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="126.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="10.0" layoutY="184.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
@@ -41,16 +35,29 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="465.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="WHITE" layoutX="208.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save">
+            <Text fill="WHITE" layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save System">
                <font>
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="mySaveButton" layoutX="34.0" layoutY="157.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="63.0" prefWidth="105.0" text="Save" />
-            <Button fx:id="myLoadButton" layoutX="180.0" layoutY="157.0" mnemonicParsing="false" onAction="#loadButton" prefHeight="62.0" prefWidth="105.0" text="Load" />
-            <Button fx:id="myResetSystem" layoutX="326.0" layoutY="157.0" mnemonicParsing="false" onAction="#resetSystem" prefHeight="63.0" prefWidth="102.0" text="Reset" />
-         </children></AnchorPane>
+            <Button fx:id="mySaveButton" layoutX="34.0" layoutY="157.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="63.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Save" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="myLoadButton" layoutX="180.0" layoutY="157.0" mnemonicParsing="false" onAction="#loadButton" prefHeight="62.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Load" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="myResetSystem" layoutX="326.0" layoutY="157.0" mnemonicParsing="false" onAction="#resetSystem" prefHeight="63.0" prefWidth="102.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Reset" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </center>
 </BorderPane>

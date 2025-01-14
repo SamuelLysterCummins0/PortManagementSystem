@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.portsytemca1.SearchController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="135.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToPort" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToPortControls" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Search" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToSave" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="465.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Goods">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="searchField" layoutX="14.0" layoutY="63.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter goods name" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <Button fx:id="searchButton" layoutX="224.0" layoutY="63.0" mnemonicParsing="false" onAction="#searchGoods" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Search" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <ListView fx:id="resultsListView" layoutX="14.0" layoutY="100.0" prefHeight="285.0" prefWidth="437.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-border-color: white; -fx-border-width: 1px;" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

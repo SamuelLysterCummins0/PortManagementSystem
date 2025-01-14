@@ -15,27 +15,22 @@
    <left>
       <VBox prefHeight="400.0" prefWidth="135.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToPortControls" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToPortControls" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Port Controls" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToSearch" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Search" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="126.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#switchToSave" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#switchToSave" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Save" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit">
                <font>
                   <Font size="18.0" />
                </font>
@@ -46,36 +41,36 @@
    <right>
       <AnchorPane fx:id="ap" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="437.0" prefWidth="556.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="227.0" layoutY="8.0" text="Port Creation" textFill="WHITE">
+            <Label layoutX="227.0" layoutY="8.0" text="Port Creation" textFill="WHITE" style="-fx-font-size: 24;">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="myPortButton" layoutX="18.0" layoutY="47.0" mnemonicParsing="false" onAction="#addPortButton" prefHeight="21.0" prefWidth="81.0" text="Add Port" />
-            <Button fx:id="myContainerShipButton" layoutX="91.0" layoutY="269.0" mnemonicParsing="false" onAction="#addContainerShipButton" prefHeight="12.0" prefWidth="117.0" text="Add ContainerShip" />
-            <Button fx:id="myAddContainerButton" layoutX="378.0" layoutY="269.0" mnemonicParsing="false" onAction="#addContainerButton" prefHeight="1.0" prefWidth="96.0" text="Add Container" />
-            <Button layoutX="243.0" layoutY="392.0" mnemonicParsing="false" onAction="#addPalletButton" prefHeight="25.0" prefWidth="74.0" text="Add Pallet" />
-            <TextField fx:id="portNameField" layoutX="114.0" layoutY="47.0" prefHeight="25.0" prefWidth="87.0" promptText="port name" />
-            <TextField fx:id="portCodeField" layoutX="215.0" layoutY="47.0" prefHeight="25.0" prefWidth="89.0" promptText="port code" />
-            <TextField fx:id="portCountryField" layoutX="318.0" layoutY="47.0" prefHeight="25.0" prefWidth="88.0" promptText="port country" />
-            <ListView fx:id="portListView" layoutX="7.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="84.0" prefWidth="118.0" />
-            <TextField fx:id="shipNameField" layoutX="44.0" layoutY="206.0" prefHeight="25.0" prefWidth="93.0" promptText="ship name" />
-            <TextField fx:id="shipCodeField" layoutX="154.0" layoutY="206.0" prefHeight="25.0" prefWidth="95.0" promptText="ship code" />
-            <TextField fx:id="flagStateField" layoutX="42.0" layoutY="235.0" prefHeight="25.0" prefWidth="97.0" promptText="flag state" />
-            <TextField fx:id="photographField" layoutX="153.0" layoutY="235.0" prefHeight="25.0" prefWidth="96.0" promptText="photograph" />
-            <TextField fx:id="unitValueField" layoutX="181.0" layoutY="360.0" prefHeight="25.0" prefWidth="93.0" promptText="unit value" />
-            <ListView fx:id="dockedShipsListView" layoutX="127.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="84.0" prefWidth="106.0" />
-            <ListView fx:id="portContainersListView" layoutX="342.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="85.0" prefWidth="101.0" />
+            <Button fx:id="myPortButton" layoutX="18.0" layoutY="47.0" mnemonicParsing="false" onAction="#addPortButton" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Add Port" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <Button fx:id="myContainerShipButton" layoutX="91.0" layoutY="269.0" mnemonicParsing="false" onAction="#addContainerShipButton" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Add Container Ship" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <Button fx:id="myAddContainerButton" layoutX="378.0" layoutY="269.0" mnemonicParsing="false" onAction="#addContainerButton" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Add Container" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <Button layoutX="243.0" layoutY="392.0" mnemonicParsing="false" onAction="#addPalletButton" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px;" text="Add Pallet" textFill="WHITE" onMouseEntered="#handleButtonHover" onMouseExited="#handleButtonExit" />
+            <TextField fx:id="portNameField" layoutX="114.0" layoutY="47.0" prefHeight="25.0" prefWidth="87.0" promptText="port name" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="portCodeField" layoutX="215.0" layoutY="47.0" prefHeight="25.0" prefWidth="89.0" promptText="port code" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="portCountryField" layoutX="318.0" layoutY="47.0" prefHeight="25.0" prefWidth="88.0" promptText="port country" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <ListView fx:id="portListView" layoutX="7.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="84.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <TextField fx:id="shipNameField" layoutX="44.0" layoutY="206.0" prefHeight="25.0" prefWidth="93.0" promptText="ship name" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="shipCodeField" layoutX="154.0" layoutY="206.0" prefHeight="25.0" prefWidth="95.0" promptText="ship code" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="flagStateField" layoutX="42.0" layoutY="235.0" prefHeight="25.0" prefWidth="97.0" promptText="flag state" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="photographField" layoutX="153.0" layoutY="235.0" prefHeight="25.0" prefWidth="96.0" promptText="photograph" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="unitValueField" layoutX="181.0" layoutY="360.0" prefHeight="25.0" prefWidth="93.0" promptText="unit value" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <ListView fx:id="dockedShipsListView" layoutX="127.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="84.0" prefWidth="106.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <ListView fx:id="portContainersListView" layoutX="342.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="85.0" prefWidth="101.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
             <CheckBox fx:id="checkBox10" layoutX="406.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleCheckBoxAction" prefHeight="17.0" prefWidth="40.0" text="10" textFill="WHITE" />
             <CheckBox fx:id="checkBox20" layoutX="454.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleCheckBoxAction" prefHeight="17.0" prefWidth="40.0" text="20" textFill="WHITE" />
             <CheckBox fx:id="checkBox40" layoutX="503.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleCheckBoxAction" prefHeight="17.0" prefWidth="40.0" text="40" textFill="WHITE" />
-            <ListView fx:id="shipContainersListView" layoutX="236.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="85.0" prefWidth="104.0" />
-            <TextField fx:id="quantityField" layoutX="256.0" layoutY="326.0" prefHeight="25.0" prefWidth="60.0" promptText="quantity" />
-            <TextField fx:id="descrField" layoutX="169.0" layoutY="326.0" prefHeight="25.0" prefWidth="79.0" promptText="descr" />
-            <TextField fx:id="totalWeightField" layoutX="283.0" layoutY="360.0" prefHeight="25.0" prefWidth="93.0" promptText="total weight" />
-            <TextField fx:id="containerNumberField" layoutX="302.0" layoutY="216.0" prefHeight="25.0" prefWidth="96.0" promptText="container Num" />
-            <TextField fx:id="totalSizeField" layoutX="329.0" layoutY="326.0" prefHeight="25.0" prefWidth="67.0" promptText="total size" />
-            <ListView fx:id="palletListView" layoutX="448.0" layoutY="102.0" prefHeight="85.0" prefWidth="110.0" />
+            <ListView fx:id="shipContainersListView" layoutX="236.0" layoutY="102.0" onMouseClicked="#initialize" prefHeight="85.0" prefWidth="104.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
+            <TextField fx:id="quantityField" layoutX="256.0" layoutY="326.0" prefHeight="25.0" prefWidth="60.0" promptText="quantity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="descrField" layoutX="169.0" layoutY="326.0" prefHeight="25.0" prefWidth="79.0" promptText="descr" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="totalWeightField" layoutX="283.0" layoutY="360.0" prefHeight="25.0" prefWidth="93.0" promptText="total weight" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="containerNumberField" layoutX="302.0" layoutY="216.0" prefHeight="25.0" prefWidth="96.0" promptText="container Num" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <TextField fx:id="totalSizeField" layoutX="329.0" layoutY="326.0" prefHeight="25.0" prefWidth="67.0" promptText="total size" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" onMouseEntered="#handleTextFieldFocus" onMouseExited="#handleTextFieldUnfocus" />
+            <ListView fx:id="palletListView" layoutX="448.0" layoutY="102.0" prefHeight="85.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;" />
             <Text fill="WHITE" layoutX="7.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------------------------------------------------------------------------------------------------------------------" />
             <Text fill="WHITE" layoutX="7.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------------------------------------------------------------------------------------------------------------------" />
             <Text fill="WHITE" layoutX="50.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ports" wrappingWidth="32.08203125" />
@@ -86,7 +81,7 @@
             <Text fill="WHITE" layoutX="426.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Container Size" wrappingWidth="81.08203125" />
             <Text fill="WHITE" layoutX="9.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------------------------------------------------------------------------------------------------------------------" />
             <Text fill="WHITE" layoutX="223.0" layoutY="258.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------------------------" />
-         </children></AnchorPane>
+         </children>
+      </AnchorPane>
    </right>
-
 </BorderPane>

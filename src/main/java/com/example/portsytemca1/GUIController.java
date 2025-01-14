@@ -14,9 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
-
-
 public class GUIController {
 
     @FXML
@@ -319,4 +316,33 @@ return -1;
     public void switchToSave(ActionEvent event) throws IOException {
         sceneManager.switchScene("Save.fxml");
     }
-        }
+
+    @FXML
+    public void switchToSearch(ActionEvent event) throws IOException {
+        SceneManager.getInstance().switchScene("Search.fxml");
+    }
+
+    @FXML
+    public void handleButtonHover(MouseEvent event) {
+        Button button = (Button) event.getSource();
+        button.setStyle("-fx-background-color: white; -fx-text-fill: #14242B; -fx-border-color: white; -fx-border-width: 2px;");
+    }
+
+    @FXML
+    public void handleButtonExit(MouseEvent event) {
+        Button button = (Button) event.getSource();
+        button.setStyle("-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 2px;");
+    }
+
+    @FXML
+    public void handleTextFieldFocus(MouseEvent event) {
+        TextField textField = (TextField) event.getSource();
+        textField.setStyle("-fx-background-color: white; -fx-text-fill: #14242B; -fx-border-color: white; -fx-border-width: 1px;");
+    }
+
+    @FXML
+    public void handleTextFieldUnfocus(MouseEvent event) {
+        TextField textField = (TextField) event.getSource();
+        textField.setStyle("-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;");
+    }
+}

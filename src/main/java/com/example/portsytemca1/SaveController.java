@@ -7,6 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -57,28 +60,19 @@ public class SaveController {
 
 
 
-    public void switchToPort(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Port.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void switchToPort() throws IOException {
+        SceneManager.getInstance().switchScene("Port.fxml");
     }
 
-    public void switchToPortControls(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PortControls.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void switchToPortControls() throws IOException {
+        SceneManager.getInstance().switchScene("PortControls.fxml");
     }
 
-    public void switchToSearch(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Search.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void switchToSearch() throws IOException {
+        SceneManager.getInstance().switchScene("Search.fxml");
     }
 
     public void switchToView(ActionEvent event) throws IOException {
@@ -87,5 +81,29 @@ public class SaveController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    public void handleButtonHover(MouseEvent event) {
+        Button button = (Button) event.getSource();
+        button.setStyle("-fx-background-color: white; -fx-text-fill: #14242B; -fx-border-color: white; -fx-border-width: 2px;");
+    }
+
+    @FXML
+    public void handleButtonExit(MouseEvent event) {
+        Button button = (Button) event.getSource();
+        button.setStyle("-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 2px;");
+    }
+
+    @FXML
+    public void handleTextFieldFocus(MouseEvent event) {
+        TextField textField = (TextField) event.getSource();
+        textField.setStyle("-fx-background-color: white; -fx-text-fill: #14242B; -fx-border-color: white; -fx-border-width: 1px;");
+    }
+
+    @FXML
+    public void handleTextFieldUnfocus(MouseEvent event) {
+        TextField textField = (TextField) event.getSource();
+        textField.setStyle("-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1px;");
     }
 }

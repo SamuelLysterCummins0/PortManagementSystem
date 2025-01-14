@@ -2,71 +2,57 @@
   <Classes.ShippingSystem>
     <ports>
       <head>
-        <next>
-          <contents class="Classes.Port">
-            <portName>Sam</portName>
-            <portCode>1034</portCode>
-            <portCountry>ireland</portCountry>
-            <dockedShips>
-              <head>
-                <contents class="Classes.ContainerShip">
-                  <shipName>null</shipName>
-                  <shipCode>20102256</shipCode>
-                  <flagState>ireland</flagState>
-                  <photograph>g</photograph>
-                  <currentPort reference="../../../.."/>
-                  <containers/>
-                </contents>
-              </head>
-            </dockedShips>
-            <storedContainers/>
-            <pallets/>
-          </contents>
-        </next>
-        //
         <contents class="Classes.Port">
-          <portName>c</portName>
-          <portCode>1033</portCode>
-          <portCountry>ireland</portCountry>
-          <dockedShips>
-            <head>
-              <contents class="Classes.ContainerShip">
-                <shipName>gg</shipName>
-                <shipCode>2</shipCode>
-                <flagState>ireland</flagState>
-                <photograph>g</photograph>
-                <currentPort reference="../../../.."/>
-                <containers>
-                  <head>
-                    <contents class="Classes.Container">
-                      <containerNumber>222</containerNumber>
-                      <containerSize>20</containerSize>
-                      <isOnShore>false</isOnShore>
-                      <currentShip reference="../../../.."/>
-                      <currentPort reference="../../../../../../.."/>
-                      <pallets>
-                        <head>
-                          <contents class="Classes.Pallet">
-                            <goodsDescription>jfiejfief</goodsDescription>
-                            <numberOfGoods>12</numberOfGoods>
-                            <unitValue>65</unitValue>
-                            <totalWeight>12</totalWeight>
-                            <totalSize>11</totalSize>
-                            <currentContainer reference="../../../.."/>
-                          </contents>
-                        </head>
-                      </pallets>
-                    </contents>
-                  </head>
-                </containers>
-              </contents>
-            </head>
-          </dockedShips>
+          <portName>Sam Port</portName>
+          <portCode>2010</portCode>
+          <portCountry>Ireland</portCountry>
+          <dockedShips/>
           <storedContainers/>
           <pallets/>
         </contents>
       </head>
     </ports>
-    <shipsAtSea/>
+    <shipsAtSea>
+      <head>
+        <contents class="Classes.ContainerShip">
+          <shipName>SamShip</shipName>
+          <shipCode>12</shipCode>
+          <flagState>Ireland</flagState>
+          <photograph>edadada</photograph>
+          <containers>
+            <head>
+              <contents class="Classes.Container">
+                <containerNumber>12</containerNumber>
+                <containerSize>10</containerSize>
+                <isOnShore>false</isOnShore>
+                <currentShip reference="../../../.."/>
+                <pallets>
+                  <head>
+                    <next>
+                      <contents class="Classes.Pallet">
+                        <goodsDescription>deawdad</goodsDescription>
+                        <numberOfGoods>12</numberOfGoods>
+                        <unitValue>12</unitValue>
+                        <totalWeight>12</totalWeight>
+                        <totalSize>1222</totalSize>
+                        <currentContainer reference="../../../../.."/>
+                      </contents>
+                    </next>
+                    <contents class="Classes.Pallet">
+                      <goodsDescription>s</goodsDescription>
+                      <numberOfGoods>12</numberOfGoods>
+                      <unitValue>12</unitValue>
+                      <totalWeight>12</totalWeight>
+                      <totalSize>1222</totalSize>
+                      <currentContainer reference="../../../.."/>
+                    </contents>
+                  </head>
+                </pallets>
+              </contents>
+            </head>
+          </containers>
+        </contents>
+      </head>
+    </shipsAtSea>
   </Classes.ShippingSystem>
 </object-stream>
